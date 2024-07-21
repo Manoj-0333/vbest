@@ -1,0 +1,588 @@
+
+body {
+    background-color: aliceblue;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-position: top;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-color: aliceblue;
+    top: 0;
+    width: 100%;
+    height: auto;
+    padding: 2px 20px;
+    z-index: 2;
+}
+nav {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+}
+nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+nav ul li {
+    display: inline-block;
+    margin: 5px 25px;
+}
+nav ul li:hover {
+    -webkit-text-stroke: 2px #040303;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 100%;
+}
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.bg-video{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    height: 125vh;
+    filter: blur(0.5px);
+}
+.bg-image{
+    display: none;
+}
+
+.quote{
+    line-break: auto;
+    background-image: linear-gradient(to right, rgba(255, 255, 0, 0.775),rgba(255, 166, 0, 0.775));
+    color: rgb(250, 0, 0);
+    /*background-image: linear-gradient(to right, rgba(0, 204, 255, 0.775),rgba(26, 255, 0, 0.775));*/
+    font-size: 125%;
+    width: 70%;
+    word-spacing: 5px ;
+    line-height: 150%;
+    font-variant:small-caps;
+    height: max-content;
+    padding: 2% 2%;
+    border: 1px rgba(255, 217, 0, 0.575) solid;
+    filter: drop-shadow(10px 10px 5px rgb(127, 127, 127));
+    -webkit-text-stroke: 0.3px black;
+    animation: fadeIn 5s;
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.intro{
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-top: 3%;
+    display:inline-flex;  
+}
+.bitcoin{
+    margin-top: -1.6%;
+    margin-left: 8%;
+    width: 12%;
+    height: 12%;
+    animation-name: rotate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+@keyframes rotate {
+    from{
+        transform:rotate(0deg)
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
+
+main{
+    background-image:linear-gradient(to right, rgb(4, 203, 247),rgb(212, 219, 220),rgb(4, 203, 247)) ;
+    margin-top: 0px;
+    padding: 5px;
+    min-height: 50%;
+}
+.logo {
+    width: 55%;
+    height: auto;
+    
+}
+.t{ /*TITLE 1*/
+    text-align-last: right;
+    margin-top: -10%;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 700%;
+    letter-spacing: 0.3in;
+    color:rgba(245, 6, 6, 0.822);
+    filter: drop-shadow(7px 3px 1px #000000);
+}
+.st{/*TITLE 2*/
+    padding-right: 1.3%;
+    margin-top: -2%;
+    text-align-last: right;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 350%;
+    letter-spacing: 0.1in;
+    color: gold;
+    /*-webkit-text-fill-color:color-mix(in srgb,rgb(238, 138, 7) 50%, rgb(226, 248, 102) 50%);*/
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+    filter: drop-shadow(4px 1px 0px goldenrod);
+}
+
+
+/* Flexbox register & contact */
+
+*{
+    box-sizing: border-box;
+}
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 50px;
+    text-align: center;
+}
+.flex-item-left {
+    background-color: #9b2727fc;
+    padding: 10px;
+    flex: 50%;
+}
+.flex-item-right {
+    background-color: rgba(19, 161, 0, 0.673);
+    padding: 10px;
+    flex: 50%;
+}
+
+.txt1{
+    color: white;
+    font-family: cursive;
+}
+.btn-txt1{
+    font-variant: small-caps;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    line-height:0px; 
+    color: rgb(255, 255, 255);
+    transition: all .6s ease-out;
+    display: block;
+}
+.btn-txt1:hover{
+    color: rgb(0, 0, 0);
+}
+.join{
+    align-items: center;
+    font-size: large;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.join-image{
+    width: 100px;
+    height: 100px;
+}
+.join-button{
+    background-color: rgb(144, 42, 42, 0.784);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: 2s;
+    border-style:none;
+    border-radius: 5px;
+    width: auto;
+    height: auto;
+}
+.join-button:hover{
+    transform: scale(2);
+    background-color: rgba(144, 42, 42, 0.784);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24);
+    color: aliceblue;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+.txt2{
+    color: rgb(12, 12, 12);
+    font-family: cursive;
+}
+.btn-txt2{
+    font-variant: small-caps;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    line-height:0px; 
+    color: black;
+    transition: all .6s ease-out;
+    display: block;
+}
+.btn-txt2:hover{
+    color: white;
+}
+.contact{
+    align-items: center;
+    font-size: large;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.contact-image{
+    width: 100px;
+    height: 100px;
+}
+.contact-button{
+    background-color: rgba(19, 161, 0, 0.673);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: 2s;
+    border-style:none;
+    border-radius: 5px;
+    width: auto;
+    height: auto;
+}
+.contact-button:hover{
+    transform: scale(2);
+    background-color: rgba(19, 161, 0, 0.673);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24);
+    color: aliceblue;
+}
+a:link{
+    text-decoration: none;
+}
+
+/*******   ABOUT US   ********/
+
+
+
+#about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+.about-image {
+    width: 200px;
+    height: auto;
+    max-width: 100%;
+    height: auto;
+}
+.about-details {
+    text-align: left;
+}
+.about-details p {
+    text-align: justify;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-family: monospace;
+    font-size: 1.5em;
+    line-height: 2em;
+    color: #333;
+}
+
+
+/*******   CONTACT   ********/
+#contact {
+    margin: 2% 15%;
+    height: auto;
+    border: 2px solid silver;
+    background-image: linear-gradient(grey, white);
+    display: flex;
+    flex-direction: column; /* Arrange children vertically */
+    align-items: center; /* Center align children horizontally */
+    padding: 2%; /* Add padding inside the contact section */
+}
+.location {
+    width: 100%;
+    max-width: 900px; /* Maximum width for the image */
+    object-fit: cover;
+    margin-bottom: 1%; /* Space below the image */
+}
+.contact-details {
+    display: flex;
+    flex-direction: column; /* Arrange contact details vertically */
+    align-items: left; /* Center align the contact details */
+    text-align: left; /* Center align text */
+}
+.contact-details div {
+    display: flex;
+    font-weight: bolder;
+    align-items: center; /* Center align items horizontally */
+    margin: 0.5em 0; /* Space between each detail */
+}
+.contact-details div img {
+    margin-right: 10px; /* Space between icon and text */
+    width: 35px;
+}
+
+
+/*******   FOOTER   ********/
+
+footer {
+    background-image: linear-gradient( 180deg,  #91beeb 60.2%, #03c8f45d 92.8% );
+    padding: 20px;
+    padding-top: 20px;
+    text-align: center;
+}
+footer p {
+    margin: 0;
+    padding: 10px 0;
+}
+footer a {
+    margin: 0 10px;
+    color: #000000;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+#up{
+    position: fixed;
+    background-color: transparent;
+    border-width: 0px;
+    bottom: 8%; /* Distance from the bottom of the viewport */
+    right: 1%;  /* Distance from the right edge of the viewport */
+    cursor: pointer;
+    display: none;
+}
+#fbbt, #wabt, #inbt{
+    background-color: transparent;
+    border-width: 0px ;
+}
+
+
+/***  service  ***/
+span{
+    margin: 2px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#service {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    gap: 25px;
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    margin-top: 100px;
+    transition: transform 0.5s ease;
+}
+.card-container:hover{
+    transform: translateY(-20px);
+}
+.card{
+    padding:5px;
+    width: 300px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: -5px 5px 5px rgb(106, 106, 106); 
+}
+.card img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.card-content{
+    padding: 0px 20px;
+    cursor: pointer;
+}
+.card-content h1{
+    font-variant: small-caps;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.card-content p{
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+
+/**** RESPONSIVE 900 PX ****/
+
+@media (max-width: 900px) {
+    html{
+        overflow-x: hidden;
+    }
+    body{
+        background-color: rgb(185, 210, 232);
+        height: 150%;
+        background-position: top;
+        position: relative;
+        background-size: contain;
+        background-repeat: no-repeat;    
+    }
+    .logo{
+        width: 70%;
+        height: auto;
+        margin-top: 5%;
+        margin-left: -2%;
+        text-align: left;
+    }
+    .t{
+        text-align-last: right;
+        margin-top: -15%;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 400%;
+        letter-spacing: 0.3in;
+        color:rgb(255, 0, 0);
+        filter: drop-shadow(7px 3px 1px #000000);
+    }
+    .st{
+        padding-right: 1.3%;
+        margin-top: -2%;
+        text-align-last: right;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 250%;
+        color: gold;
+        /*-webkit-text-fill-color:color-mix(in srgb,rgb(238, 138, 7) 50%, rgb(226, 248, 102) 50%);*/
+        -webkit-text-stroke: 0.75px rgb(0, 0, 0);
+        filter: drop-shadow(3px 1px 0px goldenrod);
+    }
+    .bg-video{
+        display:flex;
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+        filter: blur(1.5px);
+    }
+    .flex-item-right, .flex-item-left {
+        flex: 100%;
+    }
+
+    header{
+        position: fixed;
+        height: auto;
+        z-index: 2;
+    }
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul {
+        background-color:rgb(215, 209, 209);
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    nav ul.menu-open {
+        display: flex;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+    nav ul li a {
+        font-size: 120%; /* Increase font size for better readability */
+        padding: 10px; /* Add padding for touch-friendliness */
+    }
+    .menu-toggle {
+        display: block;
+        align-self: flex-end;
+        padding-right: 2%;
+    }
+
+    #service{
+        margin-top: auto;
+    }
+
+    .bitcoin{
+        display: none;
+    }
+    .intro{    
+        width: 120%;
+        margin-left: 6%;
+        margin-top: 5%;
+    }
+    .quote{
+        border-radius: 20%;
+        text-align: center;
+    }
+
+    #about {
+        flex-direction: row;
+        text-align: left;
+    }
+    .about-image {
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+    .about-details p{
+        font-size: 1em;
+    }
+
+
+    #contact {
+        margin: 2%;
+        padding: 5%;
+    }
+    .location {
+        width: 100%;
+    }
+    .contact-details {
+        width: 100%;
+    }
+    .contact-details div {
+        display: flex;
+        font-size:smaller;
+        font-weight: bold;
+        align-items: center; 
+        margin: 0.5em 0; 
+    }
+    .contact-details div img {
+        margin-right: 10px; 
+        width: 35px;
+    }
+    
+    header, footer {
+        padding: 5px;
+    }
+    footer a {
+        display: block;
+        margin: 2px 0;
+    }
+}
+
+/**** RESPONSIVE 600 PX ****/
+@media (max-width: 600px){
+    .t{
+        font-size: 300%;
+    }
+    .st{
+        font-size: 150%;
+        -webkit-text-stroke: 0.35px gold;
+    }
+    .location{
+        width: 320px;
+    }
+}
